@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Калькулятор</title>
+    <link rel="stylesheet" href="calculator_style.css">
+</head>
+
+<body>
+    <div> <!-- div - это базовый html-контейнер, который может содержать в себе другие html-элементы. -->
+
+        <div>
+            <h1 id="header_work_name">Лабораторная работа №1</h1>
+            <p id="p_work_purpose"> <u>Цель данной лабораторной работы</u> - <b>знакомство</b> с инструментами
+                построения пользовательских интерфейсов
+                web-сайтов: <b>HTML</b>, <b>CSS</b>. В ходе выполнения работы, вам предстоит ознакомиться с кодом
+                реализации простого
+                калькулятора, и затем выполнить задания по варианту.</p>
+        </div>
+        <div>
+            <button id="btn_change_theme" class="btn settings">Сменить тему</button>
+            <div class="dropdown">
+                <button id="btn_choose_style" class="btn settings">Выбрать стиль</button>
+                <div class="dropdown-content">
+                    <a href="#">Классический</a>
+                    <a href="#">Яркий</a>
+                    <a href="#">Джунгли</a>
+                </div>
+            </div>
+            <button id="btn_open_github" class="btn settings">
+                <a href="https://github.com/victobes" class="ref settings" target="_blank">Открыть Github</a>
+            </button>
+        </div>
+
+        <div id="calculator_body" class="calculator body">
+            <!-- блок с экраном калькулятора, где будет выводиться результат вычислений. -->
+            <div id="result" class="result">
+                0
+            </div>
+
+            <!-- блок с кнопками калькулятора. -->
+            <div>
+                <!--горизонтальный ряд из четырех кнопок-->
+                <div>
+                    <button id="btn_op_clear" class="my-btn secondary">C</button>
+                    <!-- про тэг кнопки: https://www.w3schools.com/tags/tag_button.asp -->
+                    <button id="btn_op_sign" class="my-btn secondary">+/-</button>
+                    <button id="btn_op_percent" class="my-btn secondary">%</button>
+                    <button id="btn_op_div" class="my-btn secondary">/</button>
+                </div>
+
+                <div>
+                    <button id="btn_digit_7" class="my-btn">7</button>
+                    <button id="btn_digit_8" class="my-btn">8</button>
+                    <button id="btn_digit_9" class="my-btn">9</button>
+                    <button id="btn_op_mult" class="my-btn primary">x</button>
+                </div>
+
+                <div>
+                    <button id="btn_digit_4" class="my-btn">4</button>
+                    <button id="btn_digit_5" class="my-btn">5</button>
+                    <button id="btn_digit_6" class="my-btn">6</button>
+                    <button id="btn_op_minus" class="my-btn primary">-</button>
+                </div>
+
+                <div>
+                    <button id="btn_digit_1" class="my-btn">1</button>
+                    <button id="btn_digit_2" class="my-btn">2</button>
+                    <button id="btn_digit_3" class="my-btn">3</button>
+                    <button id="btn_op_plus" class="my-btn primary">+</button>
+                </div>
+
+                <div>
+                    <button id="btn_digit_dot" class="my-btn">.</button>
+                    <button id="btn_digit_0" class="my-btn">0</button>
+                    <button id="btn_op_equal" class="my-btn primary execute">=</button>
+                </div>
+            </div>
+        </div>
+        <div>
+            ЛР выполнена Беспаловой В.А.
+        </div>
+        <details>
+            <summary>Об авторе</summary>
+            Беспалова Виктория Андреевна, ИУ5-43Б
+        </details>
+        <img src="https://images.unsplash.com/photo-1519052537078-e6302a4968d4?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+    </div>
+</body>
+
+</html>
