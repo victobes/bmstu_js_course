@@ -14,6 +14,7 @@ export class ProductComponent {
                         <div class="col-md-8">
                             <div class="card-body">
                                 <h5 class="card-title">${data.chat_settings.title}</h5>
+                                <h6 class="card-subtitle">Число участников: ${data.chat_settings.members_count}</h5>
                             </div>
                         </div>
                     </div>

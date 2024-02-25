@@ -38,8 +38,10 @@ export class MainPage {
 
     changeFilter(e) {
         console.log("CURRENT FILTER VALUE: ", e.target.value)
-        // location.reload()
-        this.reloadData(e.target.value)
+        localStorage.clear()
+        localStorage.setItem("currentFilter", e.target.value)
+        console.log("LOCAL STORAGE (changeFilter): ", localStorage.getItem("currentFilter"))
+        location.reload()
 
     }
 
@@ -63,12 +65,14 @@ export class MainPage {
         filter.render(this.changeFilter.bind(this))
         console.log("FILTER VALUE(RENDER):", filter.getFilterText())
 
-        this.getData(filter.getFilterText())
+        console.log("LOCAL STORAGE START: ", localStorage.getItem('currentFilter'))
+        let currentFilter = "all"
+        if (localStorage.getItem('currentFilter') != null) {
+            currentFilter = localStorage.getItem('currentFilter')
+            filter.setSelectedItem(currentFilter)
+        }
+        console.log("LOCAL STORAGE: ", localStorage.getItem('currentFilter'))
+
+        this.getData(currentFilter)
     }
 }
-
-///////////////////////////////TODO///////////////////////////////
-// Добавить обработчик собыия изменения фильтра.
-// Добавить информацию о чате на вторую страницу 
-// (кол-во пользователей, текст закрепленного сообщения и др.)
-// Попробовать сделать главную страницу более красивой. 

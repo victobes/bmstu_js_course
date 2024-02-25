@@ -7,13 +7,17 @@ export class selectFilterComponent {
         return (
             `
             <select id="filter" class="custom-select custom-select-lg mb-3">
-                <option selected>all</option>
+                <option >all</option>
                 <option>important</option>
                 <option>unanswered</option>
                 <option>unread</option>
             </select>
             `
         )
+    }
+
+    setSelectedItem(currentValue) {
+        document.getElementById("filter").value = currentValue
     }
 
     getFilterText() {
