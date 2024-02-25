@@ -22,15 +22,14 @@ export class MainPage {
     }
 
     clickInfo() {
-
         const subjectPage = new SubjectPage(this.parent, this.currentSlide)
         subjectPage.render()
     }
 
     InfoAboutCurrentSlide(e){
-        // this.currentSlide = e.relatedTarget.id
         this.currentSlide = e.relatedTarget
-        console.log(this.currentSlide)
+        console.log("CURRENT SLIDE INFO: ", this.currentSlide)
+        // console.log(this.currentSlide.getElementsByTagName("img"))
     }
 
     render() {

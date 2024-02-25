@@ -14,12 +14,24 @@ export class CarouselComponent {
         <div class="carousel-inner">
           <div id="slide_1" class="carousel-item active">
             <img src="https://source.unsplash.com/fk4tiMlDFF0/900x600/" class="d-block w-100" style="height: 600px; width: 900px" alt="test1">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Щенок 1</h2>
+              <p>Что-то про щенка 1</p>
+            </div>
           </div>
           <div id="slide_2" class="carousel-item">
             <img src="https://source.unsplash.com/TzjMd7i5WQI/900x600/" class="d-block w-100" style="height: 600px; width: 900px" alt="test2">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Щенок 2</h2>
+              <p>Что-то про щенка 2</p>
+            </div>
           </div>
           <div id="slide_3" class="carousel-item">
             <img src="https://source.unsplash.com/-Go4DH2pZbc/900x600/" class="d-block w-100" style="height: 600px; width: 900px" alt="test3">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Щенок 3</h2>
+              <p>Что-то про щенка 3</p>
+            </div>
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -40,7 +52,7 @@ export class CarouselComponent {
 
       var carousel = document.getElementById("carouselExampleIndicators");
 
-      carousel.addEventListener("slid.bs.carousel", listener);
+      carousel.addEventListener("slide.bs.carousel", listener);
     });
   }
 
