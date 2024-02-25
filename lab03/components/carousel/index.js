@@ -3,7 +3,7 @@ export class CarouselComponent {
     this.parent = parent
   }
 
-  getHTML() {
+  getHTML(data) {
     return (
       `<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
         <div class="carousel-indicators">
@@ -12,25 +12,25 @@ export class CarouselComponent {
           <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner">
-          <div id="slide_1" class="carousel-item active">
-            <img src="https://source.unsplash.com/fk4tiMlDFF0/900x600/" class="d-block w-100" style="height: 600px; width: 900px" alt="test1">
+          <div id="${data[0].id}" class="carousel-item active">
+            <img src=${data[0].src} class="d-block w-100" style="height: 600px; width: 900px" alt="test1">
             <div class="carousel-caption d-none d-md-block">
-              <h2>Щенок 1</h2>
-              <p>Что-то про щенка 1</p>
+              <h2>${data[0].title}</h2>
+              <p>${data[0].description}</p>
             </div>
           </div>
-          <div id="slide_2" class="carousel-item">
-            <img src="https://source.unsplash.com/TzjMd7i5WQI/900x600/" class="d-block w-100" style="height: 600px; width: 900px" alt="test2">
+          <div id="${data[1].id}" class="carousel-item">
+            <img src=${data[1].src} class="d-block w-100" style="height: 600px; width: 900px" alt="test2">
             <div class="carousel-caption d-none d-md-block">
-              <h2>Щенок 2</h2>
-              <p>Что-то про щенка 2</p>
+              <h2>${data[1].title}</h2>
+              <p>${data[1].description}</p>
             </div>
           </div>
-          <div id="slide_3" class="carousel-item">
-            <img src="https://source.unsplash.com/-Go4DH2pZbc/900x600/" class="d-block w-100" style="height: 600px; width: 900px" alt="test3">
+          <div id="${data[2].id}" class="carousel-item">
+            <img src=${data[2].src} class="d-block w-100" style="height: 600px; width: 900px" alt="test3">
             <div class="carousel-caption d-none d-md-block">
-              <h2>Щенок 3</h2>
-              <p>Что-то про щенка 3</p>
+              <h2>${data[2].title}</h2>
+              <p>${data[2].description}</p>
             </div>
           </div>
         </div>
@@ -56,10 +56,9 @@ export class CarouselComponent {
     });
   }
 
-  render(listener) {
-    const html = this.getHTML()
+  render(data, listener) {
+    const html = this.getHTML(data)
     this.parent.insertAdjacentHTML('beforeend', html)
-    // this.addListeners()
     this.addListeners(listener)
   }
 }

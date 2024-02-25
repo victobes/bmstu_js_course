@@ -7,7 +7,9 @@ export class SubjectComponent {
         return (
             `
             <div>
-            <h1>${data.id}</h1>
+            <img src=${data.src} class="d-block w-100" style="height: 600px; width: 900px" alt="test2">
+            <h1>${data.title}</h1>
+            <p>${data.description}</h1>
             </div>
             `
         )

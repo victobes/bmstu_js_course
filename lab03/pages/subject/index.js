@@ -1,15 +1,17 @@
 import { BackButtonComponent } from "../../components/back-button/index.js";
 import { SubjectComponent } from "../../components/subject/index.js";
 import { MainPage } from "../main/index.js";
+import { mocks } from "../../mocks/mocks.js";
 
 export class SubjectPage {
-    constructor(parent, info) {
+    constructor(parent, slideId) {
         this.parent = parent
-        this.info = info
+        this.slideId = slideId
     }
 
     getData(){
-        return this.info;
+        let slideInfo = mocks.find(x => x.id == this.slideId)
+        return slideInfo;
     }
 
     get pageRoot() {
@@ -42,14 +44,3 @@ export class SubjectPage {
         subjectItem.render(data)
     }
 }
-
-/////////////////////// РЕФЕРЕНСЫ /////////////////////
-
-  // getData() {
-    //     return {
-    //         id: 1,
-    //         src: "https://i.pinimg.com/originals/c9/ea/65/c9ea654eb3a7398b1f702c758c1c4206.jpg",
-    //         title: `Акция ${this.id}`,
-    //         text: "Такой акции вы еще не видели"
-    //     }
-    // }

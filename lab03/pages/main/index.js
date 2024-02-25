@@ -1,6 +1,7 @@
 import { CarouselComponent } from "../../components/carousel/index.js";
 import { InfoButtonComponent } from "../../components/info-button/index.js";
 import { SubjectPage } from "../subject/index.js";
+import { mocks } from "../../mocks/mocks.js";
 
 export class MainPage {
 
@@ -22,14 +23,12 @@ export class MainPage {
     }
 
     clickInfo() {
-        const subjectPage = new SubjectPage(this.parent, this.currentSlide)
+        const subjectPage = new SubjectPage(this.parent, this.currentSlide.id)
         subjectPage.render()
     }
 
     InfoAboutCurrentSlide(e){
         this.currentSlide = e.relatedTarget
-        console.log("CURRENT SLIDE INFO: ", this.currentSlide)
-        // console.log(this.currentSlide.getElementsByTagName("img"))
     }
 
     render() {
@@ -38,7 +37,7 @@ export class MainPage {
         this.parent.insertAdjacentHTML('beforeend', html)
 
         const carousel = new CarouselComponent(this.pageRoot)
-        carousel.render(this.InfoAboutCurrentSlide.bind(this))
+        carousel.render(mocks, this.InfoAboutCurrentSlide.bind(this))
 
         const infoButton = new InfoButtonComponent(this.pageRoot)
         infoButton.render(this.clickInfo.bind(this))
