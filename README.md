@@ -6,4 +6,4 @@
 ### Лабораторная работа №5 (демо-, защита-)
 ### Лабораторная работа №6 (демо-, защита-)
 
-### [Домашнее задание](https://github.com/victobes/bmstu_js_course/tree/main/homework)
+### [Домашнее задание (демо-✅, защита-)](https://github.com/victobes/bmstu_js_course/tree/main/homework)
